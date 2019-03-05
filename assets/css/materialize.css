@@ -26,6 +26,9 @@ html {
  */
 body {
   margin: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 /**
@@ -60,6 +63,7 @@ figure,
 main {
   /* 1 */
   display: block;
+  flex: 1 0 auto;
 }
 
 /**
@@ -2254,7 +2258,7 @@ nav ul li {
   padding: 0;
 }
 nav ul li.active {
-  background-color: rgba(0, 0, 0, 0.1); 
+  /*background-color: rgba(0, 0, 0, 0.1);*/
   border-bottom: 3px solid #2BBBAD;
 }
 
@@ -2280,7 +2284,7 @@ nav ul a.btn > .material-icons, nav ul a.btn-large > .material-icons, nav ul a.b
 }
 
 nav ul a:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  /*background-color: rgba(0, 0, 0, 0.1);*/
   border-bottom: 3px solid #2BBBAD;
 }
 
