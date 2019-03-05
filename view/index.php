@@ -15,38 +15,35 @@
 </head>
 
 <body>
-    <nav class="grey lighten-2">
+    <nav class="grey">
         <div>
             <ul>
                 <li><a href="">Inicio</a></li>
-                <li><a class="btn modal-trigger" href="#modal">Login</a></li>
+                <li><a href="">Fim</a></li>
             </ul>
         </div>
+        <a class="btn blue modal-trigger" href="#modal">Login</a>
     </nav>
     <div id="modal" class="modal">
         <div class="modal-content">
-            <div class="card">
-                <div class="card-content">
-                    <h3 class="">Sistema de Login</h3>
-                    <?php if(isset($_SESSION['falha_de_autenticacao'])):?>
-                    <div class="">
-                        <script>
-                        M.toast({
-                            html: 'ERRO: Usuário ou senha inválidos.'
-                        })
-                        </script>
-                    </div>
-                    <?php 
-                    unset($_SESSION['falha_de_autenticacao']);
-                    endif;
-                    ?>
-                    <form action="../dao/login.php" method="POST">
-                        <input name="usuario" name="text" class="" placeholder="Seu usuário" autofocus="">
-                        <input name="senha" class="" type="password" placeholder="Sua senha">
-                        <button type="submit" class="btn">Entrar</button>
-                    </form>
-                </div>
+            <h3 class="">Sistema de Login</h3>
+            <?php if(isset($_SESSION['falha_de_autenticacao'])):?>
+            <div class="">
+                <script>
+                M.toast({
+                    html: 'ERRO: Usuário ou senha inválidos.'
+                })
+                </script>
             </div>
+            <?php 
+            unset($_SESSION['falha_de_autenticacao']);
+            endif;
+            ?>
+            <form href="#!"action="../dao/login.php" method="POST">
+                <input name="usuario" name="text" class="" placeholder="Seu usuário" autofocus="">
+                <input name="senha" class="" type="password" placeholder="Sua senha">
+                <button type="submit" class="btn">Entrar</button>
+            </form>
         </div>
     </div>
 </body>
