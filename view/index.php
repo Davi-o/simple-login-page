@@ -21,8 +21,8 @@
             <nav class="grey darken-4">
                 <div class="nav-wrapper">
                     <ul class="right">
-                        <li id="list-item1" class="menu-item" onclick="setActive(this.id)"><a onclick="smoothScrollBegin()" href="#!">Inicio</a></li>
-                        <li id="list-item2" class="menu-item" onclick="setActive(this.id)"><a onclick="smoothScrollContact()">Contatos</a></li>
+                        <li class="menu-item"><a id="list-item1" onclick="smoothScrollBegin(),setActive(this.id)" href="#!">Inicio</a></li>
+                        <li class="menu-item"><a id="list-item2" onclick="smoothScrollContact(),setActive(this.id)">Contatos</a></li>
                         <li><a class="btn modal-trigger" href="#modal">Login</a></li>
                     </ul>
                 </div>
@@ -89,9 +89,9 @@
             </div>
         </div>
         <div class="footer-copyright grey darken-4">
-            <div id="contato" class="container">
+            <div class="container">
                 © 2014 Copyright Text
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                <a id="contato" class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
         </div>
     </footer>

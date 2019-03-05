@@ -8,6 +8,11 @@ function smoothScrollBegin() {
   element.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
+function smoothScrollContact() {
+  var element = document.getElementById("contato");
+  element.scrollIntoView({ behavior: "smooth", block: "end" });
+}
+
 function setActive(id) {
   var element = document.getElementById(id);
   if (element == 'list-item1') {
@@ -23,9 +28,4 @@ function setActive(id) {
       element.classList.add('active');
     }
   }
-}
-
-function smoothScrollContact() {
-  var element = document.getElementById("contato");
-  element.scrollIntoView({ behavior: "smooth", block: "end" });
 }
