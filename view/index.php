@@ -15,37 +15,48 @@
 </head>
 
 <body>
-    <nav class="grey">
-        <div>
-            <ul>
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Fim</a></li>
-            </ul>
-        </div>
-        <a class="btn blue modal-trigger" href="#modal">Login</a>
-    </nav>
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <h3 class="">Sistema de Login</h3>
-            <?php if(isset($_SESSION['falha_de_autenticacao'])):?>
-            <div class="">
-                <script>
-                M.toast({
-                    html: 'ERRO: Usuário ou senha inválidos.'
-                })
-                </script>
+    <header>
+        <nav class="grey darken-4">
+            <div>
+                <ul>
+                    <li class="menu-item"><a href="">Inicio</a></li>
+                    <li class="menu-item"><a href="">Fim</a></li>
+                    <li><a class="btn modal-trigger" href="#modal">Login</a></li>
+                </ul>
             </div>
-            <?php 
-            unset($_SESSION['falha_de_autenticacao']);
-            endif;
-            ?>
-            <form href="#!"action="../dao/login.php" method="POST">
-                <input name="usuario" name="text" class="" placeholder="Seu usuário" autofocus="">
-                <input name="senha" class="" type="password" placeholder="Sua senha">
-                <button type="submit" class="btn">Entrar</button>
-            </form>
+        </nav>
+    </header>
+    <section>
+        <div class="card-panel">
+            <div class="card-content">
+                <p>AAAAA</p>
+            </div>
         </div>
-    </div>
+        <div id="modal" class="modal blue-grey darken-3">
+            <div class="modal-content">
+                <h3 class="teal-text">Login</h3>
+                <?php if(isset($_SESSION['falha_de_autenticacao'])):?>
+                <div class="">
+                    <script>
+                    M.toast({
+                        html: 'ERRO: Usuário ou senha inválidos.'
+                    })
+                    </script>
+                </div>
+                <?php 
+                unset($_SESSION['falha_de_autenticacao']);
+                endif;
+                ?>
+                <form href="#!"action="../dao/login.php" method="POST">
+                    <input name="usuario" name="text" class="teal-text" placeholder="Seu usuário" autofocus="" required>
+                    <input name="senha" class="teal-text" type="password" placeholder="Sua senha" required>
+                    <button type="submit" class="btn">Entrar</button>
+                </form>
+            </div>
+        </div><!-- Login -->
+    </section>
+    <footer>
+    </footer>
 </body>
 
 </html>
