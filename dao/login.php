@@ -15,7 +15,7 @@ $row = mysqli_num_rows($result);
 
 if($row == 1){
     $_SESSION['usuario'] = $usuario;
-    header('Location: ../view/painel.php');
+    header('Location: ../view/index.php');
     exit();
 }else{
     $_SESSION['falha_de_autenticacao'] = true;
