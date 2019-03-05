@@ -21,8 +21,8 @@
             <nav class="grey darken-4">
                 <div class="nav-wrapper">
                     <ul class="right">
-                        <li class="menu-item"><a onclick="smoothScrollBegin()" href="#!">Inicio</a></li>
-                        <li class="menu-item"><a onclick="smoothScrollContact()">Contatos</a></li>
+                        <li id="list-item1" class="menu-item" onclick="setActive(this.id)"><a onclick="smoothScrollBegin()" href="#!">Inicio</a></li>
+                        <li id="list-item2" class="menu-item" onclick="setActive(this.id)"><a onclick="smoothScrollContact()">Contatos</a></li>
                         <li><a class="btn modal-trigger" href="#modal">Login</a></li>
                     </ul>
                 </div>
