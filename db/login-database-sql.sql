@@ -42,8 +42,8 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`id_usuario`, `nome_usuario`, `senha`, `email`, `telefone`) VALUES
 (1, 'davi', '202cb962ac59075b964b07152d234b70', 'alvesdelima.davi@gmail.com', '51985276555'),
-(2, 'Daniel', '202cb962ac59075b964b07152d234b70', 'daniel@paladi', '123456789456'),
-(3, 'mariana', 'e60408e9a55027070e3caf0550d2b4df', 'daniel@paladi', '123456789');
+(2, 'daniel', '202cb962ac59075b964b07152d234b70', 'daniel@paladino', '123456789456'),
+(3, 'marcos', 'e60408e9a55027070e3caf0550d2b4df', 'daniel@paladino', '123456789');
 
 --
 -- Indexes for dumped tables
