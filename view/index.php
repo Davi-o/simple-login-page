@@ -30,8 +30,7 @@
                         <?php if(isset($_SESSION['usuario'])):?>
                         <li> Olá, <?php echo $_SESSION['usuario'];?></li>
                         <li><a class="btn" href="../dao/logout.php">Sair</a></li>
-                        <?php endif;?>
-                        <?php if(!isset($_SESSION['usuario'])):?>
+                        <?php else:?>
                         <li><a class="btn modal-trigger" href="#modal">Login</a></li>
                         <?php endif;?>
                     </ul>
@@ -54,17 +53,38 @@
                         com Lorem Ipsum, e mais recentemente com os programas de publicação como o Aldus PageMaker que
                         incluem versões do Lorem Ipsum.</p>
                 </div>
-                <?php endif;?>
-                <?php if(isset($_SESSION['cadastrar'])):?>
-                    <div id="registForm" class="container">
-                        <form class="txt registForm" action="" method="post">
-                            <input type="text" name="usuario" class="teal-text flow-text" placeholder="Nome de Usuário">
-                            <div class="row valign-wrapper">
-                                <input id="password" type="password" name="senha" class="teal-text flow-text"
-                                    placeholder="Senha do usuário">
-                                <a href="#!" type="btn-flat" onclick="showHidePwd()"><i id="visibility"
-                                        class="material-icons grey-text">visibility</i></a>
-                                <span class="lever"></span>
+                <?php else:?>
+                    <div id="registForm" class="row txt">
+                        <h1>Cadastre-se</h1>
+                        <form class=" registForm col s12" action="../controller/controller.php" method="post">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="nomeusuario" type="text" name="usuario" class="teal-text validate" required>
+                                    <label for="nomeusuario">Nome de Usuário</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="email" type="email" name="email" class="teal-text validate" required>  
+                                    <label for="email">Email</label>  
+                                    <span class="helper-text" data-error="Insira um email válido" data-success="Email bacana"></span>                           
+                                </div>
+                            </div>                        
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="telefone" type="text" name="telefone" class="teal-text">
+                                    <label for="telefone">Telefone</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s11">
+                                    <input id="password" type="password" name="senha" class="teal-text validate" required>
+                                    <label for="password">Senha</label>
+                                </div>
+                                <div class="col s1">
+                                <a href="#!" type="btn-flat" onclick="showHidePwd()"><i id="visibility" class="material-icons grey-text">visibility</i></a>
+                                </div>
+                                <button type="submit" class="btn">Cadastrar</button>
                             </div>
                         </form>
                     </div>

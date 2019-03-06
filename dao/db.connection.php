@@ -9,7 +9,7 @@ class DbConnection extends PDO{
     public static function getInstance(){
         if(!isset(self::$instance)){
             try{
-                self::$instance = new DbConnection("mysql:dbname=login;host=localhost","davi","123");
+                self::$instance = new DbConnection("mysql:dbname=login;host=localhost","root","");
             }catch(PDOExeption $e){
                 echo "Erro: ".$e;
             }
