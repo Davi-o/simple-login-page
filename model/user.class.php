@@ -4,7 +4,7 @@ class User{
     private $passwd;
     private $fone;
     private $mail;
-
+ 
     public function __destruct(){}
     public function __construct(){}
     public function __get($a){

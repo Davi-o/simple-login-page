@@ -1,4 +1,4 @@
-<?php
+<?php 
 include_once '../model/user.class.php';
 include_once '../dao/dao.class.php';
 include_once '../dao/db.connection.php';
