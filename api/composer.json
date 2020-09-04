@@ -1,0 +1,14 @@
+{
+    "name": "odawi/api",
+    "type": "project",
+    "authors": [
+        {
+            "name": "oDavi",
+            "email": "alvesdelima.davi@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^4.5",
+        "phpunit/phpunit": "^9.3"
+    }
+}
