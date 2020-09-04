@@ -1,11 +1,11 @@
 <?php
-require_once 'db.connection.php';
-
-class Dao{
-    private $connection = null;
+// TODO Refactor this DAO
+class UserDao
+{
+    private $connection;
 
     public function __construct(){
-        $this->connection = DbConnection::getInstance();
+        $this->connection = DatabaseConnection::getInstance();
     }
     public function __destruct(){}
     

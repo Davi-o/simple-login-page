@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sistema de Login</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="../assets/css/materialize.css" />
-    <link rel="stylesheet" href="../assets/css/colors.css" />
-    <link rel="stylesheet" href="../assets/css/mycss.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/materialize.css" />
+    <link rel="stylesheet" href="assets/css/colors.css" />
+    <link rel="stylesheet" href="assets/css/mycss.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/login.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
-    <script src="../assets/js/materialize.js"></script>
-    <script src="../assets/js/init.js"></script>
+    <script src="assets/js/materialize.js"></script>
+    <script src="assets/js/init.js"></script>
 </head>
 
 <body>
@@ -29,7 +29,7 @@
                         </li>
                         <?php if(isset($_SESSION['usuario'])):?>
                         <li> Olá, <?php echo $_SESSION['usuario'];?></li>
-                        <li><a class="btn" href="../dao/logout.php">Sair</a></li>
+                        <li><a class="btn" href="../api/dao/logout.php">Sair</a></li>
                         <?php else:?>
                         <li><a class="btn modal-trigger" href="#modal">Login</a></li>
                         <?php endif;?>
@@ -56,7 +56,7 @@
                 <?php else:?>
                     <div id="registForm" class="row txt">
                         <h1>Cadastre-se</h1>
-                        <form class=" registForm col s12" action="../controller/controller.php" method="post">
+                        <form class=" registForm col s12" action="../api/controller/controller.php" method="post">
                             <div class="row">
                                 <div class="input-field col s12">
                                     <input id="nomeusuario" type="text" name="usuario" class="teal-text validate" required>
@@ -94,11 +94,11 @@
         <div id="modal" class="modal blue-grey darken-3">
             <div class="modal-content">
                 <h3 class="teal-text">Login</h3>
-                <form href="#!" action="../dao/login.php" method="POST">
+                <form href="#!" action="../api/dao/login.php" method="POST">
                     <input name="usuario" name="text" class="teal-text" placeholder="Seu usuário" required>
                     <input name="senha" class="teal-text" type="password" placeholder="Sua senha" required>
                     <button type="submit" class="btn">Entrar</button>
-                    <a href="../util/register.php" type="button" class="btn-flat teal-text" onclick="registForm()">Cadastre-se</a>
+                    <a href="../api/util/register.php" type="button" class="btn-flat teal-text" onclick="registForm()">Cadastre-se</a>
                     <?php if(isset($_SESSION['falha_de_autenticacao'])){
                             Helper::errorToast();
                             unset($_SESSION['falha_de_autenticacao']);
